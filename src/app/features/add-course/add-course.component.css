@@ -52,10 +52,6 @@ section::before {
   justify-content: center; 
 }
 
-.header{
-  /*   flex: 1; */
-}
-
 /* Registration Form Styles */
 /* Form Container: Updated: 11/13/2024 */
 .container {
@@ -158,4 +154,8 @@ li {
   margin: 5px 0;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.input-box input.ng-touched.ng-invalid {
+  border-color: red;
 }

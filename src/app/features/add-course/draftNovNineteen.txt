@@ -1,0 +1,80 @@
+<section>
+    <!-- Nav -->
+    <top-nav></top-nav>
+    <!-- Body -->
+    <div class="section-body">
+      <div class="container">
+        <header>Add a Course | Book</header>
+        <form #courseForm="ngForm"(ngSubmit) = "onSubmit(courseForm)" class="form">
+          <!-- <div class="column"> -->
+            <div class="input-box">
+              <label>Course or Book Name</label>
+              <input
+                [(ngModel)]="course"
+                name="course"
+                  #courseInput="ngModel"
+                type="text"
+                placeholder="Enter Course / Book name"
+                required
+              />
+              <!-- Validation Messages -->
+              <div *ngIf="courseInput.invalid && courseInput.touched">
+                <small *ngIf="courseInput.errors?.required">Course or Book Name is required.</small>
+              </div>
+            </div>
+         <!--  </div> -->
+  
+          <div class="input-box">
+            <label>Author</label>
+            <input
+              [(ngModel)]="author"
+              name="author"
+               #authorInput="ngModel"
+              type="string"
+              placeholder="Enter author's name"
+              required
+            />
+            <!-- Validation Messages -->
+      <div *ngIf="authorInput.invalid && authorInput.touched">
+          <small *ngIf="authorInput.errors?.required">Author is required.</small>
+        </div>
+          </div>
+  
+          <div class="input-box">
+            <label>Image Url</label>
+            <input
+              [(ngModel)]="imageUrl"
+              name="imageUrl"
+               #imageUrlInput="ngModel"
+               type="string"
+              placeholder="Image link"
+              required
+            />
+             <!-- Validation Messages -->
+             <div *ngIf="imageUrlInput.invalid && imageUrlInput.touched">
+              <small *ngIf="imageUrlInput.errors?.required">Image URL is required.</small>
+            </div>
+          </div>
+          
+          <div class="input-box">
+            <label>Price (in Pesos)</label>
+            <input
+              [(ngModel)]="price"
+              name="price"
+              #priceInput="ngModel"
+              type="number"
+              placeholder="Enter price"
+              required
+            />
+             <!-- Validation Messages -->
+             <div *ngIf="priceInput.invalid && priceInput.touched">
+              <small *ngIf="priceInput.errors?.required">Price is required.</small>
+            </div>
+          </div>
+  
+          <button type="submit" [disabled]="courseForm.invalid">Save</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
