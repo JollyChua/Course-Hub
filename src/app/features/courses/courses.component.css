@@ -8,19 +8,14 @@
         }
 
         /* Background and basic layout */
-  body {
-            background-color: #f8f9fa;
-        } 
-
         header {
             z-index: 1;
             background-image: url('../../../assets/images/background-courses-page.png');
             background-position: center;
-            background-repeat: no-repeat;   /* Prevents the image from repeating */
-            background-size: cover;  
+            background-repeat: no-repeat;
+            background-size: cover;
             color: white;
             text-align: center;
-            padding: 60px 20px;
             position: relative;
             height: 40vh;
         }
@@ -33,64 +28,25 @@
             right: 0;
             bottom: 0;
             background-color: rgba(5, 29, 64, 0.5); /* #051d40 with 50% opacity */
-           /*  min-height: 100vh;
-            height: 100vh;
-            width:100%; */
           }
 
-        /* Logo and Nav */
-        .logo {
-            width: 200px;
-            height: 200px;
-            font-size: 24px;
-            font-weight: bold;
-           /*  text-align: left; */
-            padding: -50px 20px;
-            color: white;
-            margin: -50px, 0, 0 50px;
-           /*  display: inline-block; */
-            position: absolute;
-            background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url('../../../assets/svg/CourseHubLogoForDarkBackground.svg');
-}
+          .courses-page-header {
+            align-content: center;
+            z-index: 1000;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            top:50%;
+          }
 
 
         header > p, h1 {
-            position: absolute;
             justify-content: center;
             align-items: center;
-            display: inline-block;
         }
 
-        nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .cta-button {
-            background: rgb(130, 106, 251);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
 
         /* Main section */
-        main h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
         main {
             z-index: 1;
             font-size: 18px;
