@@ -7,13 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class CourseService {
   
-  private apiUrl = 'http://localhost:8080/books';  // Replace with your backend API URL
+  private registerCourseUrl = 'http://localhost:8080/books';  // Replace with your backend API URL
+  private showCoursesUrl = 'http://localhost:8080/book'; 
 
   constructor(private http: HttpClient) {
   }
  
-  registerUser(courseData: any): Observable<any> {
+  registerCourse(courseData: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(this.apiUrl, courseData, { headers });
+    return this.http.post(this.registerCourseUrl, courseData, { headers });
   }
+
+  showCourses(): Observable<any> {
+    return this.http.get(this.showCoursesUrl);
+  }
+
+
+
 }

@@ -31,7 +31,7 @@ export class AddCourseComponent {
       price: this.price,
     };
 
-    this.courseService.registerUser(courseData).subscribe(
+    this.courseService.registerCourse(courseData).subscribe(
       (response) => {},
       (error: any) => {
         console.error('Error registering course:', error);

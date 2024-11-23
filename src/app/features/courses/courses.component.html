@@ -11,32 +11,12 @@
 <!-- Courses Section -->
 <main>
     <div class="course-container">
-        <!-- English Language Card -->
-        <div class="course-card">
-            <div class="icon">EN</div>
-            <h3>English Language</h3>
-            <p>125 Tutors</p>
-        </div>
 
-        <!-- Spanish Language Card -->
-        <div class="course-card">
-            <div class="icon">ES</div>
-            <h3>Spanish Language</h3>
-            <p>83 Tutors</p>
-        </div>
-
-        <!-- Japanese Language Card -->
-        <div class="course-card">
-            <div class="icon">JP</div>
-            <h3>Japanese Language</h3>
-            <p>76 Tutors</p>
-        </div>
-
-        <!-- German Language Card -->
-        <div class="course-card">
-            <div class="icon">DE</div>
-            <h3>German Language</h3>
-            <p>64 Tutors</p>
-        </div>
+        <div *ngFor="let course of courses" class="course-card">
+            <div class="icon">{{ course.bookid }}</div>
+            <h3>{{ course.bookname }}</h3>
+            <p>Author: {{ course.author }}</p>
+            <p>Price: ${{ course.price }}</p>
+          </div>
     </div>
 </main>
