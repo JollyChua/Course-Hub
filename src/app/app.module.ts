@@ -9,20 +9,24 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from 'features/registration/home.component';
 import { CoursesComponent } from 'features/registration/courses.component';
 import { UserService } from 'services/user.service';
-/* import { TopNavComponent } from 'shared/top-nav/top-nav.component'; */
+import { platformBrowser } from '@angular/platform-browser';
+import { AppModule } from './app.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CoursesComponent,
-    /* TopNavComponent */
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
     FormsModule,
+    platformBrowser,
+    AppModule,
+    ModalModule.forRoot(), 
   ],
   providers: [ApiService, UserService],
   bootstrap: [AppComponent]

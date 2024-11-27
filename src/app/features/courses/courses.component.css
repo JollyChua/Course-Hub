@@ -96,3 +96,28 @@
         .course-card p {
             color: #666;
         }
+
+
+        /* MODAL */
+.modal {
+    margin-left: 40%;
+  }
+  .modal-title {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  height: inherit;
+  }
+  .modal-body {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+            height: inherit;
+        }
+  .modal-footer {
+    padding: 10px 3px 10px 0px;
+    gap: 10px;
+  }
+  .course-container button {
+    margin-right: 8px;
+  }
