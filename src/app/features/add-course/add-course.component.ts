@@ -6,12 +6,12 @@ import { TopNavComponent } from '../../shared/top-nav/top-nav.component';
 import { CourseService } from '../../services/course.service';
 
 @Component({
-  selector: 'app-add-course',
-  standalone: true,
-  imports: [FormsModule, RouterModule, TopNavComponent, CommonModule],
-  templateUrl: './add-course.component.html',
-  styleUrls: ['./add-course.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-add-course',
+    standalone: true,
+    imports: [FormsModule, RouterModule, TopNavComponent, CommonModule],
+    templateUrl: './add-course.component.html',
+    styleUrls: ['./add-course.component.css'],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AddCourseComponent {
   course: string = '';

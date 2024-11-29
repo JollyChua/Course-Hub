@@ -1,5 +1,5 @@
-
-        /* Reset some default styles */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+      /* Reset some default styles */
      * {
             margin: 0;
             padding: 0;
@@ -95,4 +95,8 @@
 
         .course-card p {
             color: #666;
+        }
+
+        .button-div {
+           margin: 10px 0 10px 0;
         }
