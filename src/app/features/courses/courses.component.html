@@ -9,7 +9,7 @@
 
 
 <!-- Courses Section -->
-<main>
+<body>
   <div class="course-container">
     <div *ngFor="let course of courses" class="course-card">
       <div class="icon">{{ course.bookid }}</div>
@@ -18,8 +18,8 @@
       <p>Price: ${{ course.price }}</p>
 
     <div class="button-div">
-      <button mat-raised-button (click)="openDialog()" color="warn">Delete</button>
+      <button mat-raised-button (click)="openDialog(course.bookid)" color="warn">Delete</button>
     </div>
     </div>
   </div>
-</main>
+</body>
