@@ -5,13 +5,12 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
     selector: 'app-courses',
     standalone: true,
-    imports: [CommonModule, TopNavComponent, MatButtonModule, MatInputModule],
+    imports: [CommonModule, TopNavComponent, MatButtonModule,],
     templateUrl: './courses.component.html',
     styleUrl: './courses.component.css',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
