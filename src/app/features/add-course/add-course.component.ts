@@ -39,7 +39,6 @@ export class AddCourseComponent {
       }
     );
 
-    console.log('Course Submitted!');
     // Reset the form after submission
     courseform.reset();
   }

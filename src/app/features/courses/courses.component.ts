@@ -26,7 +26,7 @@ export class CoursesComponent implements OnInit{
   fetchCourses(): void {
     this.courseService.showCourses().subscribe(
       (response) => {
-        console.log('All courses:', response);
+
         this.courses = response; // Assuming the API returns an array of courses
       },
       (error: any) => {
@@ -35,14 +35,26 @@ export class CoursesComponent implements OnInit{
     );
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogComponent, {
+  deleteCourse(courseId: number): void {
+    this.courseService.deleteCourse(courseId).subscribe(
+      (response) => {
+        this.fetchCourses(); // Refresh course list after deletion
+      },
+      (error: any) => {
+        console.error('Error deleting course:', error);
+      }
+    );
+  }
 
-    data: {  }  // Pass data to the dialog
+  openDialog(courseId: number): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: { courseId },
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      if (result) {
+        this.deleteCourse(courseId); // Call your delete method
+      } 
     });
   }
 }

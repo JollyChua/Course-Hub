@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef,  MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -8,8 +7,15 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-dialog',
   imports: [MatDialogModule, MatButtonModule],
   templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.css'
+  styleUrls: ['./dialog.component.css'], // Correct path here
 })
 export class DialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(
+    public dialogRef: MatDialogRef<DialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { courseId: number }
+  ) {}
+
+  onConfirm(): void {
+    this.dialogRef.close(true); // Pass `true` on confirm
+  }
 }

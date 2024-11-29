@@ -6,9 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CourseService {
-  
-  private registerCourseUrl = 'http://localhost:8080/books';  // Replace with your backend API URL
-  private showCoursesUrl = 'http://localhost:8080/book'; 
+
+  private baseUrl = 'http://localhost:8080';  // Base URL for convenience
+  private registerCourseUrl = `${this.baseUrl}/books`; // Endpoint to register a course
+  private showCoursesUrl = `${this.baseUrl}/book`; // Endpoint to get all courses
+  private deleteCourseUrl = `${this.baseUrl}/book`; // Endpoint to delete a course
 
   constructor(private http: HttpClient) {
   }
@@ -22,6 +24,8 @@ export class CourseService {
     return this.http.get(this.showCoursesUrl);
   }
 
-
-
+  deleteCourse(courseId: number): Observable<any> {
+    return this.http.delete(`${this.showCoursesUrl}/${courseId}`);
+  }
+ 
 }
